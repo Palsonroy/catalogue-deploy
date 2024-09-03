@@ -16,18 +16,17 @@
     }
      parameters {
         string(name: 'version', defaultValue: '1.0.0', description: 'What is the artifact version?')
-
+        string(name: 'environment', defaultValue: 'dev', description: 'What is the environment?')
     
     }
     
     stages {
-        stage('Get the version') {
+        stage('Print version') {
              steps {
-                script { //groovy script
-                      def packageJson = readJSON file: 'package.json' //def is variable initialisation
-                     packageVersion = packageJson.version
-                     echo "application version: $packageVersion"
-                    }
+                sh """
+                    echo "version: ${params.version}"
+                    echo "environment: ${params.environment}
+                """
                 }
             }
         
