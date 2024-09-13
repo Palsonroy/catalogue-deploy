@@ -25,7 +25,7 @@
              steps {
                 sh """
                     echo "version: ${params.version}"
-                    echo "environment: ${params.environment}
+                    echo "environment: ${params.environment}"
                 """
                 }
             }
