@@ -49,7 +49,7 @@ resource "null_resource" "catalogue" {
     destination = "/tmp/bootstrap.sh"
   }
 
-  provisioner "remote-exec" {
+    provisioner "remote-exec" {
     # Bootstrap script called with private_ip of each node in the cluster
     inline = [
       "chmod +x /tmp/bootstrap.sh",
