@@ -16,7 +16,7 @@
         ansiColor('xterm')
     }
      parameters {
-        string(name: 'version', defaultValue: '1.2.0', description: 'What is the artifact version?')
+        string(name: 'version', defaultValue: '', description: 'What is the artifact version?')
         string(name: 'environment', defaultValue: 'dev', description: 'What is the environment?')
     
     }
