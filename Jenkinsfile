@@ -40,6 +40,11 @@
                     }
                 }
             stage('Plan') {
+                when{
+                    expression{
+                        params.Create
+                    }
+                }
                 steps {
                     sh """
                         cd terraform
